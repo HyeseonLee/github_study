@@ -1,0 +1,30 @@
+<h1>로그인</h1>
+
+<form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    <div class="part" style="font-size: 20px; padding: 40px;">
+        <span>Username:</span>
+        <input name="username" type="username" class="form-control" id="exampleInputEmail1">
+
+    </div> 
+    <div class="part" style="font-size: 20px; padding: 40px;">
+            <span>Password:</span>
+            <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+        </div> 
+    
+        <br><br>
+         <div class='loginbuttons'>
+         <button type="submit" class="btn btn-light">login</button>
+        </div>  
+
+       
+    </div> 
+</form>
+
+<script type="text/javascript">
+    {% if messages %}
+        {% for message in messages %}
+            alert("{{message.message}}"); //alert는 "~"로 적어주는 것 까먹지 말자 ! 
+        {% endfor %}
+    {% endif %}
+</script>
