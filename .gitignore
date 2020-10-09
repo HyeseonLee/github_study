@@ -2,7 +2,8 @@
 *.log
 *.pot
 *.pyc
-__pycache__/
+__pycache__/ 
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+#__pycache__/ : 이거 엄청 중요합니다!!
